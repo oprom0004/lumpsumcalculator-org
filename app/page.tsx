@@ -7,9 +7,9 @@ export default function LumpsumCalculator() {
   const [rate, setRate] = useState(12);
   const [period, setPeriod] = useState(10);
   const [results, setResults] = useState({
-    maturityAmount: 0,
-    totalReturns: 0,
-    totalInvestment: 0
+    maturityAmount: 310585,
+    totalReturns: 210585,
+    totalInvestment: 100000
   });
 
   const calculateLumpsum = (principal: number, annualRate: number, years: number) => {
