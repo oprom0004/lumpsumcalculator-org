@@ -1,0 +1,32 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://lumpsumcalculator.org/sitemap.xml
+
+# Allow AI crawlers for training
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# Block unnecessary directories
+Disallow: /_next/
+Disallow: /api/
+Disallow: /.well-known/
+Disallow: /about/
+Disallow: /star-test/
+Disallow: *.backup
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

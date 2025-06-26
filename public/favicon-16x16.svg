@@ -1,0 +1,10 @@
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .star-emoji {
+      font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+      font-size: 14px;
+      filter: hue-rotate(200deg) saturate(2);
+    }
+  </style>
+  <text x="8" y="11" text-anchor="middle" class="star-emoji">✨</text>
+</svg>
