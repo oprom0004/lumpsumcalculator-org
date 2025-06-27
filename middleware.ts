@@ -3,8 +3,15 @@ import { NextRequest, NextResponse } from 'next/server';
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
   
-  // 允许的路径
+  // 允许的路径（不含斜杠的规范版本）
   const validPaths = ['/', '/hi', '/te', '/ta', '/gu', '/404'];
+  
+  // 处理带斜杠的语言路径 - 301重定向到不带斜杠版本（SEO规范化）
+  const langPathsWithSlash = ['/hi/', '/te/', '/ta/', '/gu/'];
+  if (langPathsWithSlash.includes(pathname)) {
+    const canonicalPath = pathname.slice(0, -1); // 移除末尾斜杠
+    return NextResponse.redirect(new URL(canonicalPath, request.url), 301);
+  }
   
   // 允许静态文件和 API 路径
   if (
