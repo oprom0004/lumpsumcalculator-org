@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { FloatingLanguageSwitcher } from "./components/LanguageSwitcher";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -123,6 +124,9 @@ export default function RootLayout({
           }}
         />
         
+        {/* Floating Language Switcher */}
+        <FloatingLanguageSwitcher />
+        
         {/* Page Content */}
         <main>
           {children}
@@ -131,7 +135,7 @@ export default function RootLayout({
         {/* Global Footer */}
         <footer className="bg-gray-800 text-white p-6 text-center">
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8 mb-6">
+            <div className="grid md:grid-cols-2 gap-8 mb-6">
               <div>
                 <h3 className="font-semibold text-lg mb-3">Lumpsum Calculator</h3>
                 <p className="text-gray-300 text-sm">
@@ -146,18 +150,6 @@ export default function RootLayout({
                   <li><a href="/#advantages" className="hover:text-white">Why Choose Us</a></li>
                   <li><a href="/#faq" className="hover:text-white">FAQ</a></li>
                 </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-3">Languages / भाषाएं</h4>
-                <div className="space-y-2">
-                  <a href="/" className="block text-sm text-white px-3 py-2 bg-blue-600 rounded text-center">English</a>
-                  <div className="grid grid-cols-2 gap-2">
-                    <a href="/hi" className="text-sm text-gray-300 hover:text-white px-3 py-2 hover:bg-gray-700 rounded text-center">हिंदी</a>
-                    <a href="/te" className="text-sm text-gray-300 hover:text-white px-3 py-2 hover:bg-gray-700 rounded text-center">తెలుగు</a>
-                    <a href="/ta" className="text-sm text-gray-300 hover:text-white px-3 py-2 hover:bg-gray-700 rounded text-center">தமிழ்</a>
-                    <a href="/gu" className="text-sm text-gray-300 hover:text-white px-3 py-2 hover:bg-gray-700 rounded text-center">ગુજરાતી</a>
-                  </div>
-                </div>
               </div>
             </div>
             <div className="border-t border-gray-700 pt-4">

@@ -438,16 +438,6 @@ export default function LumpsumCalculatorTamil() {
           </div>
         </div>
 
-        {/* Language switcher */}
-        <div className="text-center mt-8">
-          <p className="text-sm text-gray-500 mb-4">மற்ற மொழிகளிலும் கிடைக்கிறது:</p>
-          <div className="flex justify-center space-x-3 flex-wrap">
-            <a href="/hi" className="text-sm text-blue-600 hover:text-blue-800 px-3 py-1 rounded">हिंदी</a>
-            <a href="/te" className="text-sm text-blue-600 hover:text-blue-800 px-3 py-1 rounded">తెలుగు</a>
-            <a href="/gu" className="text-sm text-blue-600 hover:text-blue-800 px-3 py-1 rounded">ગુજરાતી</a>
-            <a href="/" className="text-sm text-blue-600 hover:text-blue-800 px-3 py-1 rounded">English</a>
-          </div>
-        </div>
       </div>
     </div>
   );
