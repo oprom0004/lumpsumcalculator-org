@@ -1,8 +1,5 @@
 {
   "version": 2,
-  "name": "lumpsumcalculator",
-  "alias": ["lumpsumcalculator.org", "www.lumpsumcalculator.org"],
-  "regions": ["sin1", "hnd1", "bom1"],
   "redirects": [
     {
       "source": "/www.lumpsumcalculator.org/(.*)",

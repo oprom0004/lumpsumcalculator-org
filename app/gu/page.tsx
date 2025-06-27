@@ -1,312 +1,132 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-
 export default function LumpsumCalculatorGujarati() {
-  const [investment, setInvestment] = useState(100000);
-  const [rate, setRate] = useState(12);
-  const [period, setPeriod] = useState(10);
-  const [results, setResults] = useState({
-    maturityAmount: 0,
-    totalReturns: 0,
-    totalInvestment: 0
-  });
-
-  const calculateLumpsum = (principal: number, annualRate: number, years: number) => {
-    const maturityAmount = principal * Math.pow(1 + annualRate / 100, years);
-    const totalReturns = maturityAmount - principal;
-    
-    return {
-      maturityAmount: Math.round(maturityAmount),
-      totalReturns: Math.round(totalReturns),
-      totalInvestment: principal
-    };
-  };
-
-  useEffect(() => {
-    const newResults = calculateLumpsum(investment, rate, period);
-    setResults(newResults);
-  }, [investment, rate, period]);
-
-  const formatCurrency = (amount: number) => {
-    return new Intl.NumberFormat('gu-IN', {
-      style: 'currency',
-      currency: 'INR',
-      maximumFractionDigits: 0
-    }).format(amount);
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             લમ્પસમ રોકાણ કેલ્ક્યુલેટર
           </h1>
+          <h2 className="text-xl font-semibold text-gray-700 mb-4">
+            મફત ઓનલાઇન કમ્પાઉન્ડ વ્યાજ કેલ્ક્યુલેટર
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-            કમ્પાઉન્ડ વ્યાજ સાથે તમારા એક-વખતના રોકાણના ભાવિ મૂલ્યની ગણતરી કરો. 
-            ચોકસાઈ સાથે તમારા નાણાકીય લક્ષ્યોની યોજના બનાવો.
+            તમારા એક-વખતના રોકાણના ભાવિ મૂલ્યની ગણતરી કરો. કમ્પાઉન્ડ વ્યાજ સાથે તમારા રોકાણની વૃદ્ધિ જુઓ.
           </p>
-          
-          {/* Language Selection */}
-          <div className="flex justify-center mb-6">
-            <div className="bg-white rounded-lg shadow-md p-2 flex space-x-2">
-              <a href="/" className="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded text-sm">English</a>
-              <a href="/hi" className="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded text-sm">हिंदी</a>
-              <a href="/te" className="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded text-sm">తెలుగు</a>
-              <a href="/ta" className="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded text-sm">தமிழ்</a>
-              <a href="/gu" className="px-3 py-1 bg-blue-600 text-white rounded text-sm">ગુજરાતી</a>
+        </div>
+
+        {/* Main CTA Card */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
+          <div className="text-center">
+            <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg className="w-10 h-10 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clipRule="evenodd"/>
+              </svg>
             </div>
-          </div>
-          
-          {/* Navigation Menu */}
-          <div className="flex justify-center space-x-6 text-sm">
-            <a href="#calculator" className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-              કેલ્ક્યુલેટર
+            
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              એડવાન્સ્ડ રોકાણ કેલ્ક્યુલેટર
+            </h3>
+            
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              અમારા સંપૂર્ણ-વિશેષતાઓ સાથેના રોકાણ કેલ્ક્યુલેટરનો ઉપયોગ કરો, જેમાં આ છે:
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-4 mb-8 text-left">
+              <div className="flex items-start space-x-3">
+                <div className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mt-0.5">
+                  <svg className="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                  </svg>
+                </div>
+                <span className="text-sm text-gray-600">ફુગાવાના ગોઠવણ</span>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <div className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mt-0.5">
+                  <svg className="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                  </svg>
+                </div>
+                <span className="text-sm text-gray-600">લક્ષ્ય-આધારિત આયોજન</span>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <div className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mt-0.5">
+                  <svg className="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                  </svg>
+                </div>
+                <span className="text-sm text-gray-600">રીઅલ-ટાઇમ ગણતરીઓ</span>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <div className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mt-0.5">
+                  <svg className="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                  </svg>
+                </div>
+                <span className="text-sm text-gray-600">વિગતવાર અંતર્દૃષ્ટિ</span>
+              </div>
+            </div>
+            
+            <a 
+              href="/"
+              className="inline-block w-full sm:w-auto px-8 py-4 bg-blue-600 text-white text-lg font-semibold rounded-xl hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+            >
+              કેલ્ક્યુલેટરનો ઉપયોગ કરો →
             </a>
-            <a href="#verification" className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors">
-              ચકાસણી
-            </a>
-            <a href="#advantages" className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors">
-              ફાયદાઓ
-            </a>
-            <a href="#faq" className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors">
-              વારંવાર પૂછાતા પ્રશ્નો
-            </a>
+            
+            <p className="text-sm text-gray-500 mt-4">
+              * સંપૂર્ણ-વિશેષતા કેલ્ક્યુલેટર અંગ્રેજીમાં ઉપલબ્ધ છે
+            </p>
           </div>
         </div>
 
-        <div id="calculator" className="grid lg:grid-cols-2 gap-8">
-          {/* Input Section */}
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-              રોકાણની વિગતો
-            </h2>
-
-            {/* Investment Amount */}
-            <div className="mb-8">
-              <div className="flex justify-between items-center mb-3">
-                <label className="text-sm font-medium text-gray-700">
-                  રોકાણની રકમ
-                </label>
-                <span className="text-lg font-semibold text-blue-600">
-                  {formatCurrency(investment)}
-                </span>
-              </div>
-              <input
-                type="range"
-                min="10000"
-                max="10000000"
-                step="10000"
-                value={investment}
-                onChange={(e) => setInvestment(Number(e.target.value))}
-                className="w-full h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer slider"
-              />
-              <div className="flex justify-between text-xs text-gray-500 mt-1">
-                <span>₹10K</span>
-                <span>₹1Cr</span>
-              </div>
-              <input
-                type="number"
-                value={investment}
-                onChange={(e) => setInvestment(Number(e.target.value))}
-                className="mt-3 w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="રકમ દાખલ કરો"
-              />
+        {/* Quick Benefits */}
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
+          <div className="bg-white rounded-xl p-6 text-center shadow-md">
+            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+              </svg>
             </div>
-
-            {/* Expected Return Rate */}
-            <div className="mb-8">
-              <div className="flex justify-between items-center mb-3">
-                <label className="text-sm font-medium text-gray-700">
-                  અપેક્ષિત વાર્ષિક વળતર
-                </label>
-                <span className="text-lg font-semibold text-green-600">
-                  {rate}%
-                </span>
-              </div>
-              <input
-                type="range"
-                min="1"
-                max="30"
-                step="0.5"
-                value={rate}
-                onChange={(e) => setRate(Number(e.target.value))}
-                className="w-full h-2 bg-green-200 rounded-lg appearance-none cursor-pointer slider"
-              />
-              <div className="flex justify-between text-xs text-gray-500 mt-1">
-                <span>1%</span>
-                <span>30%</span>
-              </div>
-            </div>
-
-            {/* Investment Period */}
-            <div className="mb-6">
-              <div className="flex justify-between items-center mb-3">
-                <label className="text-sm font-medium text-gray-700">
-                  રોકાણ અવધિ
-                </label>
-                <span className="text-lg font-semibold text-purple-600">
-                  {period} વર્ષ
-                </span>
-              </div>
-              <input
-                type="range"
-                min="1"
-                max="50"
-                step="1"
-                value={period}
-                onChange={(e) => setPeriod(Number(e.target.value))}
-                className="w-full h-2 bg-purple-200 rounded-lg appearance-none cursor-pointer slider"
-              />
-              <div className="flex justify-between text-xs text-gray-500 mt-1">
-                <span>1 વર્ષ</span>
-                <span>50 વર્ષ</span>
-              </div>
-            </div>
+            <h4 className="font-semibold text-gray-900 mb-2">99.99% ચોક્કસ</h4>
+            <p className="text-sm text-gray-600">ચકાસાયેલ ગણતરી ફોર્મ્યુલા</p>
           </div>
-
-          {/* Results Section */}
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-              રોકાણના પરિણામો
-            </h2>
-
-            {/* Result Cards */}
-            <div className="space-y-4 mb-8">
-              <div className="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-500">
-                <div className="flex justify-between items-center">
-                  <div>
-                    <p className="text-sm text-blue-600 font-medium">કુલ રોકાણ</p>
-                    <p className="text-2xl font-bold text-blue-800">
-                      {formatCurrency(results.totalInvestment)}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-green-50 rounded-xl p-6 border-l-4 border-green-500">
-                <div className="flex justify-between items-center">
-                  <div>
-                    <p className="text-sm text-green-600 font-medium">કુલ વળતર</p>
-                    <p className="text-2xl font-bold text-green-800">
-                      {formatCurrency(results.totalReturns)}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-indigo-50 rounded-xl p-6 border-l-4 border-indigo-500">
-                <div className="flex justify-between items-center">
-                  <div>
-                    <p className="text-sm text-indigo-600 font-medium">પરિપક્વતા મૂલ્ય</p>
-                    <p className="text-2xl font-bold text-indigo-800">
-                      {formatCurrency(results.maturityAmount)}
-                    </p>
-                  </div>
-                </div>
-              </div>
+          
+          <div className="bg-white rounded-xl p-6 text-center shadow-md">
+            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"/>
+              </svg>
             </div>
-
-            {/* Key Insights */}
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">મુખ્ય માહિતી</h3>
-              <div className="space-y-2 text-sm text-gray-600">
-                <p>
-                  • તમારું રોકાણ {period} વર્ષમાં{' '}
-                  <span className="font-semibold text-green-600">
-                    {((results.maturityAmount / results.totalInvestment - 1) * 100).toFixed(1)}%
-                  </span>{' '}
-                  વધશે
-                </p>
-                <p>
-                  • વાર્ષિક કમ્પાઉન્ડ વળતર દર: <span className="font-semibold">{rate}%</span>
-                </p>
-                <p>
-                  • પૈસા બમણા થવામાં લગભગ{' '}
-                  <span className="font-semibold text-blue-600">
-                    {(72 / rate).toFixed(1)} વર્ષ
-                  </span>
-                </p>
-              </div>
+            <h4 className="font-semibold text-gray-900 mb-2">સંપૂર્ણપણે મફત</h4>
+            <p className="text-sm text-gray-600">કોઈ ફી અથવા રજીસ્ટ્રેશન નથી</p>
+          </div>
+          
+          <div className="bg-white rounded-xl p-6 text-center shadow-md">
+            <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd"/>
+              </svg>
             </div>
+            <h4 className="font-semibold text-gray-900 mb-2">તાત્કાલિક પરિણામો</h4>
+            <p className="text-sm text-gray-600">તરત જ ગણતરીઓ & અંતર્દૃષ્ટિ</p>
           </div>
         </div>
 
-        {/* FAQ Section */}
-        <div id="faq" className="mt-12 bg-white rounded-2xl shadow-xl p-8">
-          <h3 className="text-2xl font-semibold text-gray-800 mb-8 text-center">
-            વારંવાર પૂછાતા પ્રશ્નો
-          </h3>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div>
-                <h4 className="text-lg font-medium text-gray-800 mb-3">
-                  લમ્પસમ રોકાણ શું છે?
-                </h4>
-                <p className="text-gray-600 leading-relaxed">
-                  લમ્પસમ રોકાણ એટલે એક વખતે મોટી રકમનું રોકાણ, 
-                  સમયાંતરે નાની રકમનું રોકાણ કરવાને બદલે. 
-                  જ્યારે તમારી પાસે રોકાણ માટે પૂરતી રકમ ઉપલબ્ધ હોય ત્યારે આ વ્યૂહરચના અસરકારક હોઈ શકે છે.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="text-lg font-medium text-gray-800 mb-3">
-                  આ કેલ્ક્યુલેટર કેટલું ચોક્કસ છે?
-                </h4>
-                <p className="text-gray-600 leading-relaxed">
-                  અમારું કેલ્ક્યુલેટર સ્ટાન્ડર્ડ કમ્પાઉન્ડ વ્યાજ ફોર્મ્યુલા A = P(1+r)^t નો ઉપયોગ કરે છે. 
-                  અમે 99.99% ચોકસાઈ પ્રાપ્ત કરીએ છીએ અને Groww અને ClearTax જેવા નાણાકીય પ્લેટફોર્મ સાથે પરિણામોની ચકાસણી કરીએ છીએ.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="text-lg font-medium text-gray-800 mb-3">
-                  લમ્પસમ અને SIP વચ્ચે શું તફાવત છે?
-                </h4>
-                <p className="text-gray-600 leading-relaxed">
-                  લમ્પસમમાં એક વખતે મોટી રકમનું રોકાણ થાય છે, જ્યારે SIP માં નિયમિત નાનાં રોકાણો થાય છે. 
-                  લમ્પસમ તાત્કાલિક બજાર એક્સપોઝરનો ફાયદો લઈ શકે છે, જ્યારે SIP રૂપિયા કોસ્ટ એવરેજિંગ પ્રદાન કરે છે.
-                </p>
-              </div>
-            </div>
-
-            <div className="space-y-6">
-              <div>
-                <h4 className="text-lg font-medium text-gray-800 mb-3">
-                  શું આ કેલ્ક્યુલેટર ઉપયોગ માટે મફત છે?
-                </h4>
-                <p className="text-gray-600 leading-relaxed">
-                  હા, અમારું લમ્પસમ કેલ્ક્યુલેટર કોઈ છુપાયેલ ફી, રજીસ્ટ્રેશન આવશ્યકતાઓ અથવા જાહેરાતો વિના સંપૂર્ણપણે મફત છે. 
-                  અમે માનીએ છીએ કે નાણાકીય આયોજન સાધનો દરેક માટે સુલભ હોવા જોઈએ.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="text-lg font-medium text-gray-800 mb-3">
-                  કમ્પાઉન્ડ વ્યાજ કેવી રીતે કામ કરે છે?
-                </h4>
-                <p className="text-gray-600 leading-relaxed">
-                  કમ્પાઉન્ડ વ્યાજનો અર્થ એ છે કે તમારા પ્રારંભિક રોકાણ અને અગાઉ મેળવેલા વળતર બંને પર વળતર મેળવવું. 
-                  સમયાંતરે, આ ઘાતીય વૃદ્ધિ બનાવે છે. 
-                  ઉદાહરણ તરીકે, 12% પર ₹1 લાખ 10 વર્ષમાં ₹3.1 લાખ બને છે.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="text-lg font-medium text-gray-800 mb-3">
-                  રોકાણ વળતરને કયા પરિબળો અસર કરે છે?
-                </h4>
-                <p className="text-gray-600 leading-relaxed">
-                  રોકાણ વળતર વાર્ષિક વળતર દર, રોકાણ અવધિ, બજારની સ્થિતિ, 
-                  ફંડ પ્રદર્શન અને આર્થિક પરિબળો પર આધાર રાખે છે. 
-                  અમારું કેલ્ક્યુલેટર વિવિધ પરિસ્થિતિઓને મોડેલ કરવામાં મદદ કરે છે.
-                </p>
-              </div>
-            </div>
+        {/* Language switcher */}
+        <div className="text-center">
+          <p className="text-sm text-gray-500 mb-4">અન્ય ભાષાઓમાં પણ ઉપલબ્ધ:</p>
+          <div className="flex justify-center space-x-3 flex-wrap">
+            <a href="/hi" className="text-sm text-blue-600 hover:text-blue-800 px-3 py-1 rounded">हिंदी</a>
+            <a href="/te" className="text-sm text-blue-600 hover:text-blue-800 px-3 py-1 rounded">తెలుగు</a>
+            <a href="/ta" className="text-sm text-blue-600 hover:text-blue-800 px-3 py-1 rounded">தமிழ்</a>
+            <a href="/" className="text-sm text-blue-600 hover:text-blue-800 px-3 py-1 rounded">English</a>
           </div>
         </div>
       </div>

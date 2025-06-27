@@ -1,7 +1,19 @@
 {
   "permissions": {
     "allow": [
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(npm run dev:*)",
+      "Bash(pkill:*)",
+      "Bash(ls:*)",
+      "Bash(npm run start:*)",
+      "Bash(npm run build:*)",
+      "Bash(npx serve out -p 9000)",
+      "Bash(npx serve:*)",
+      "Bash(python3:*)",
+      "Bash(npx http-server:*)",
+      "Bash(node:*)",
+      "Bash(cp:*)",
+      "Bash(cat:*)"
     ],
     "deny": []
   }

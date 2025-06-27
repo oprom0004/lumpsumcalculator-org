@@ -20,13 +20,13 @@ Allow: /
 User-agent: Googlebot
 Allow: /
 
-# Block unnecessary directories
+# Block unnecessary directories and files
 Disallow: /_next/
 Disallow: /api/
 Disallow: /.well-known/
-Disallow: /about/
-Disallow: /star-test/
 Disallow: *.backup
+Disallow: *.log
+Disallow: /DEPLOYMENT.md
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1

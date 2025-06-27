@@ -13,22 +13,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lumpsum Calculator - Investment Growth Calculator | Free Online Tool",
-  description: "Calculate your lumpsum investment returns with our accurate compound interest calculator. Plan your financial future with precise mutual fund growth projections. Free, fast, and reliable.",
-  keywords: "lumpsum calculator, investment calculator, compound interest calculator, mutual fund calculator, SIP calculator, financial planning, investment growth",
+  title: "Lumpsum Calculator: Investment Growth Calculator with Inflation Adjustment | Free Online Tool",
+  description: "Advanced lumpsum calculator with inflation adjustment and goal-based planning. Calculate returns or required investment amount. Includes compound interest with real purchasing power analysis.",
+  keywords: "lumpsum calculator, investment calculator with inflation, compound interest calculator, goal based investment calculator, mutual fund calculator, financial planning, investment growth, inflation adjusted returns",
   authors: [{ name: "Lumpsum Calculator" }],
   robots: "index, follow",
   openGraph: {
-    title: "Lumpsum Calculator - Investment Growth Calculator",
-    description: "Calculate your lumpsum investment returns with precision. Free online tool for financial planning.",
+    title: "Lumpsum Calculator: Investment Growth Calculator",
+    description: "Advanced calculator with goal-based planning and inflation adjustment. Calculate returns or required investment amount.",
     type: "website",
     url: "https://lumpsumcalculator.org",
     siteName: "Lumpsum Calculator",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lumpsum Calculator - Investment Growth Calculator",
-    description: "Calculate your lumpsum investment returns with precision.",
+    title: "Lumpsum Calculator: Investment Growth Calculator",
+    description: "Advanced calculator with goal-based planning and inflation adjustment.",
   },
   icons: {
     icon: [
@@ -137,13 +137,16 @@ export default function RootLayout({
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold mb-3">Tools</h4>
-                <ul className="text-sm text-gray-300 space-y-2">
-                  <li><a href="/#calculator" className="hover:text-white">Lumpsum Calculator</a></li>
-                  <li><a href="/#calculator" className="hover:text-white">Investment Planner</a></li>
-                  <li><a href="/#calculator" className="hover:text-white">Compound Interest</a></li>
-                  <li><a href="/#calculator" className="hover:text-white">Financial Growth</a></li>
-                </ul>
+                <h4 className="font-semibold mb-3">Languages / भाषाएं</h4>
+                <div className="space-y-2">
+                  <a href="/" className="block text-sm text-white px-3 py-2 bg-blue-600 rounded text-center">English</a>
+                  <div className="grid grid-cols-2 gap-2">
+                    <a href="/hi" className="text-sm text-gray-300 hover:text-white px-3 py-2 hover:bg-gray-700 rounded text-center">हिंदी</a>
+                    <a href="/te" className="text-sm text-gray-300 hover:text-white px-3 py-2 hover:bg-gray-700 rounded text-center">తెలుగు</a>
+                    <a href="/ta" className="text-sm text-gray-300 hover:text-white px-3 py-2 hover:bg-gray-700 rounded text-center">தமிழ்</a>
+                    <a href="/gu" className="text-sm text-gray-300 hover:text-white px-3 py-2 hover:bg-gray-700 rounded text-center">ગુજરાતી</a>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="border-t border-gray-700 pt-4">

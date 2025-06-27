@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // 启用静态优化
-  output: 'standalone',
+  // 启用静态导出
+  output: 'export',
+  
+  // 静态路径配置
+  trailingSlash: true,
   
   // 压缩优化
   compress: true,
