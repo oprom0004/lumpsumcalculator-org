@@ -3,8 +3,8 @@ const nextConfig = {
   // 启用静态导出
   output: 'export',
   
-  // 静态路径配置
-  trailingSlash: true,
+  // 静态路径配置 - 设置为false以保持无斜杠的规范URL
+  trailingSlash: false,
   
   // 压缩优化
   compress: true,
