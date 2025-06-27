@@ -65,46 +65,7 @@ export default function TeluguLayout({
       >
         
         {/* Page Content */}
-        <main>
-          {children}
-        </main>
-        
-        {/* Telugu Footer */}
-        <footer className="bg-gray-800 text-white p-6 text-center">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8 mb-6">
-              <div>
-                <h3 className="font-semibold text-lg mb-3">లంప్ సమ్ కాలిక్యులేటర్</h3>
-                <p className="text-gray-300 text-sm">
-                  మీ ఆర్థిక ప్లానింగ్ కోసం అత్యంత ఖచ్చితమైన మరియు విశ్వసనీయమైన ఇన్వెస్ట్‌మెంట్ కాలిక్యులేటర్।
-                </p>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-3">త్వరిత లింక్‌లు</h4>
-                <ul className="text-sm text-gray-300 space-y-2">
-                  <li><a href="/te#calculator" className="hover:text-white">కాలిక్యులేటర్</a></li>
-                  <li><a href="/te#verification" className="hover:text-white">ధృవీకరణ</a></li>
-                  <li><a href="/te#advantages" className="hover:text-white">మాను ఎందుకు ఎంచుకోవాలి</a></li>
-                  <li><a href="/te#faq" className="hover:text-white">తరచుగా అడిగే ప్రశ్నలు</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-3">టూల్స్</h4>
-                <ul className="text-sm text-gray-300 space-y-2">
-                  <li><a href="/te#calculator" className="hover:text-white">లంప్ సమ్ కాలిక్యులేటర్</a></li>
-                  <li><a href="/te#calculator" className="hover:text-white">ఇన్వెస్ట్‌మెంట్ ప్లానర్</a></li>
-                  <li><a href="/te#calculator" className="hover:text-white">కాంపౌండ్ ఇంటరెస్ట్</a></li>
-                  <li><a href="/te#calculator" className="hover:text-white">ఆర్థిక వృద్ధి</a></li>
-                </ul>
-              </div>
-            </div>
-            <div className="border-t border-gray-700 pt-4">
-              <p className="text-sm text-gray-300">
-                &copy; 2025 LumpsumCalculator.org - ఉచిత ఇన్వెస్ట్‌మెంట్ కాలిక్యులేటర్ టూల్. అన్ని హక్కులు రిజర్వ్ చేయబడ్డాయి।
-              </p>
-            </div>
-          </div>
-        </footer>
+        {children}
       </body>
     </html>
   );

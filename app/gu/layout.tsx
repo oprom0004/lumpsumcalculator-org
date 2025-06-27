@@ -65,46 +65,7 @@ export default function GujaratiLayout({
       >
         
         {/* Page Content */}
-        <main>
-          {children}
-        </main>
-        
-        {/* Gujarati Footer */}
-        <footer className="bg-gray-800 text-white p-6 text-center">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8 mb-6">
-              <div>
-                <h3 className="font-semibold text-lg mb-3">લમ્પસમ કેલ્ક્યુલેટર</h3>
-                <p className="text-gray-300 text-sm">
-                  તમારા નાણાકીય આયોજન માટે સૌથી ચોક્કસ અને વિશ્વસનીય રોકાણ કેલ્ક્યુલેટર.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-3">ઝડપી લિંક્સ</h4>
-                <ul className="text-sm text-gray-300 space-y-2">
-                  <li><a href="/gu#calculator" className="hover:text-white">કેલ્ક્યુલેટર</a></li>
-                  <li><a href="/gu#verification" className="hover:text-white">ચકાસણી</a></li>
-                  <li><a href="/gu#advantages" className="hover:text-white">અમને શા માટે પસંદ કરો</a></li>
-                  <li><a href="/gu#faq" className="hover:text-white">વારંવાર પૂછાતા પ્રશ્નો</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-3">ટૂલ્સ</h4>
-                <ul className="text-sm text-gray-300 space-y-2">
-                  <li><a href="/gu#calculator" className="hover:text-white">લમ્પસમ કેલ્ક્યુલેટર</a></li>
-                  <li><a href="/gu#calculator" className="hover:text-white">રોકાણ આયોજક</a></li>
-                  <li><a href="/gu#calculator" className="hover:text-white">કમ્પાઉન્ડ વ્યાજ</a></li>
-                  <li><a href="/gu#calculator" className="hover:text-white">નાણાકીય વૃદ્ધિ</a></li>
-                </ul>
-              </div>
-            </div>
-            <div className="border-t border-gray-700 pt-4">
-              <p className="text-sm text-gray-300">
-                &copy; 2025 LumpsumCalculator.org - મફત રોકાણ કેલ્ક્યુલેટર ટૂલ. બધા અધિકારો આરક્ષિત.
-              </p>
-            </div>
-          </div>
-        </footer>
+        {children}
       </body>
     </html>
   );

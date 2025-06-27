@@ -65,46 +65,7 @@ export default function TamilLayout({
       >
         
         {/* Page Content */}
-        <main>
-          {children}
-        </main>
-        
-        {/* Tamil Footer */}
-        <footer className="bg-gray-800 text-white p-6 text-center">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8 mb-6">
-              <div>
-                <h3 className="font-semibold text-lg mb-3">லம்ப்சம் கால்குலேட்டர்</h3>
-                <p className="text-gray-300 text-sm">
-                  உங்கள் நிதி திட்டமிடலுக்கான மிகவும் துல்லியமான மற்றும் நம்பகமான முதலீட்டு கால்குலேட்டர்.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-3">விரைவு இணைப்புகள்</h4>
-                <ul className="text-sm text-gray-300 space-y-2">
-                  <li><a href="/ta#calculator" className="hover:text-white">கால்குலேட்டர்</a></li>
-                  <li><a href="/ta#verification" className="hover:text-white">சரிபார்ப்பு</a></li>
-                  <li><a href="/ta#advantages" className="hover:text-white">ஏன் எங்களைத் தேர்வு செய்யவும்</a></li>
-                  <li><a href="/ta#faq" className="hover:text-white">அடிக்கடி கேட்கப்படும் கேள்விகள்</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-3">கருவிகள்</h4>
-                <ul className="text-sm text-gray-300 space-y-2">
-                  <li><a href="/ta#calculator" className="hover:text-white">லம்ப்சம் கால்குலேட்டர்</a></li>
-                  <li><a href="/ta#calculator" className="hover:text-white">முதலீட்டு திட்டமிடுபவர்</a></li>
-                  <li><a href="/ta#calculator" className="hover:text-white">கூட்டு வட்டி</a></li>
-                  <li><a href="/ta#calculator" className="hover:text-white">நிதி வளர்ச்சி</a></li>
-                </ul>
-              </div>
-            </div>
-            <div className="border-t border-gray-700 pt-4">
-              <p className="text-sm text-gray-300">
-                &copy; 2025 LumpsumCalculator.org - இலவச முதலீட்டு கால்குலேட்டர் கருவி. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.
-              </p>
-            </div>
-          </div>
-        </footer>
+        {children}
       </body>
     </html>
   );
