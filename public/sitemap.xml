@@ -5,7 +5,7 @@
   <!-- English (main) -->
   <url>
     <loc>https://lumpsumcalculator.org/</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="hi" href="https://lumpsumcalculator.org/hi"/>
@@ -18,7 +18,7 @@
   <!-- Hindi -->
   <url>
     <loc>https://lumpsumcalculator.org/hi</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lumpsumcalculator.org/"/>
@@ -31,7 +31,7 @@
   <!-- Telugu -->
   <url>
     <loc>https://lumpsumcalculator.org/te</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lumpsumcalculator.org/"/>
@@ -44,7 +44,7 @@
   <!-- Tamil -->
   <url>
     <loc>https://lumpsumcalculator.org/ta</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lumpsumcalculator.org/"/>
@@ -57,7 +57,7 @@
   <!-- Gujarati -->
   <url>
     <loc>https://lumpsumcalculator.org/gu</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lumpsumcalculator.org/"/>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { WebApplicationSchema, FAQSchema } from './schema';
 
 export default function LumpsumCalculator() {
   const [calculatorMode, setCalculatorMode] = useState('amount'); // 'amount' or 'goal'
@@ -77,6 +78,8 @@ export default function LumpsumCalculator() {
 
   return (
     <>
+      <WebApplicationSchema />
+      <FAQSchema />
       {/* Calculator-specific structured data */}
       <script
         type="application/ld+json"

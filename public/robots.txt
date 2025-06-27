@@ -14,10 +14,23 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
 User-agent: Bingbot
 Allow: /
 
 User-agent: Googlebot
+Allow: /
+
+User-agent: BingPreview
+Allow: /
+
+# Meta AI Crawler
+User-agent: FacebookBot
 Allow: /
 
 # Block unnecessary directories and files

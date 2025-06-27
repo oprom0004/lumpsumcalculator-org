@@ -46,6 +46,17 @@ export const metadata: Metadata = {
       'gu': "https://lumpsumcalculator.org/gu",
     }
   },
+  other: {
+    'google-site-verification': 'pending',
+    'msvalidate.01': 'pending',
+    'yandex-verification': 'pending',
+    'baidu-site-verification': 'pending',
+  },
+  verification: {
+    google: 'pending',
+    bing: 'pending',
+    yandex: 'pending',
+  },
 };
 
 export const viewport = {
