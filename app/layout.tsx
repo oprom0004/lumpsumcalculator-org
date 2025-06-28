@@ -56,8 +56,6 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'pending',
-    bing: 'pending',
-    yandex: 'pending',
   },
 };
 
