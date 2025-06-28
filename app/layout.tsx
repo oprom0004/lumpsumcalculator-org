@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { FloatingLanguageSwitcher } from "./components/LanguageSwitcher";
 
@@ -72,16 +73,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {/* Plausible Analytics */}
-        <script defer data-domain="lumpsumcalculator.org" src="https://plausible.io/js/script.js"></script>
-        <script dangerouslySetInnerHTML={{
-          __html: `window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }`
-        }} />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Plausible Analytics */}
+        <Script
+          defer
+          data-domain="lumpsumcalculator.org"
+          src="https://plausible.io/js/script.js"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="plausible-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }`
+          }}
+        />
         {/* Global Navigation */}
         <nav className="bg-blue-600 text-white p-4">
           <div className="max-w-6xl mx-auto flex justify-between items-center">
