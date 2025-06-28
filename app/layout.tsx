@@ -73,23 +73,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script defer data-domain="lumpsumcalculator.org" src="https://plausible.io/js/script.js"></script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* Plausible Analytics */}
-        <Script
-          defer
-          data-domain="lumpsumcalculator.org"
-          src="https://plausible.io/js/script.js"
-          strategy="afterInteractive"
-        />
-        <Script
-          id="plausible-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }`
-          }}
-        />
         {/* Global Navigation */}
         <nav className="bg-blue-600 text-white p-4">
           <div className="max-w-6xl mx-auto flex justify-between items-center">
